@@ -1,3 +1,6 @@
+# What is this?
+This is your new favourite programming language. Seriously, you never will need another. Especially if you are a german. Thanks to [@Flxw](https://github.com/zFlxw) for this idea (and the name). 
+
 # How to run
 1. Install rust and cargo
 2. Edit `main.alman`
