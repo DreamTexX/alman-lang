@@ -1,0 +1,17 @@
+Program = { Statements ~ EOI }
+
+Statements = _{ Statement ~ Statements? }
+Statement = _{ " "* ~ ( Declaration | Control ) ~ ( NEWLINE ) }
+
+Declaration = { Variable ~ " = " ~ Number }
+Variable = { ('a'..'z' ~ ( 'a'..'z' | 'A'..'Z' | '0'..'9' )*) }
+Number = { ('0'..'9')* }
+
+Control = _{ If | Print | PrintLn }
+If = { "wenn " ~ Condition ~ " " ~ Block }
+Print = { "drucke(" ~ Variable ~ ")" }
+PrintLn = { "druckeMitLeerzeile(" ~ Variable ~ ")" }
+
+Condition = { "(" ~ Variable ~ " " ~ Operator ~ " " ~ Number ~ ")" }
+Block = { "{" ~ NEWLINE ~ Statements ~ "}" }
+Operator = { "<=" | ">=" | "<" | ">" | "==" | "!=" }

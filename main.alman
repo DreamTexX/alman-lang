@@ -1,0 +1,5 @@
+stinktMoritz = 1
+ja = 0001001
+wenn (stinktMoritz >= 0) {
+  druckeMitLeerzeile(ja)
+}
